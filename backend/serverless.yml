@@ -1,0 +1,23 @@
+service: api-nest
+
+plugins:
+  - serverless-offline
+
+# custom:
+#   serverless-offline:
+#     httpPort: 3100
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  main:
+    handler: dist/main.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'

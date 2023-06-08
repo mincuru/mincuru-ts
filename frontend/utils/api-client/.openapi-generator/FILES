@@ -1,0 +1,8 @@
+.openapi-generator-ignore
+apis/CarsApi.ts
+apis/DefaultApi.ts
+apis/index.ts
+index.ts
+models/Car.ts
+models/index.ts
+runtime.ts
