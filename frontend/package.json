@@ -11,7 +11,18 @@
   "devDependencies": {
     "@mdi/js": "^7.2.96",
     "@types/node": "^18",
-    "nuxt": "^3.5.0"
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "latest",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "latest",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8",
+    "nuxt": "^3.5.0",
+    "typescript": "*"
   },
   "dependencies": {
     "sass": "^1.62.1",
