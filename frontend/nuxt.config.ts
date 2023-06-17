@@ -1,23 +1,21 @@
-import { defineNuxtConfig } from 'nuxt/config'
-import vuetify from 'vite-plugin-vuetify'
-
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+    css: [
+        "vuetify/lib/styles/main.sass",
+        "@mdi/font/css/materialdesignicons.css",
+    ],
     build: {
-        transpile: ['vuetify'],
-    },
-    hooks: {
-        'vite:extendConfig': (config) => {
-            config.plugins!.push(vuetify())
-        },
+        transpile: ["vuetify"]
     },
     vite: {
-        ssr: {
-            noExternal: ['vuetify'],
-        },
         define: {
-            'process.env.DEBUG': false,
+            "process.env.DEBUG": false
         },
-    },
-    css: ['@/assets/main.scss'],
-})
+        // for HMR
+        server: {
+            watch: {
+                usePolling: true
+            }
+        },
+    }
+});

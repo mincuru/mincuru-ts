@@ -694,6 +694,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mdi/font@npm:^7.2.96":
+  version: 7.2.96
+  resolution: "@mdi/font@npm:7.2.96"
+  checksum: f193bb99175e723864a7fd4010594637395a77c8011668f65856aa65abd70848239ab8642fe8aabb0f57f0ffe513a32687fddcd1a927f5aa6c7329b8d8c13e75
+  languageName: node
+  linkType: hard
+
 "@mdi/js@npm:^7.2.96":
   version: 7.2.96
   resolution: "@mdi/js@npm:7.2.96"
@@ -5559,6 +5566,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nuxt-app@workspace:."
   dependencies:
+    "@mdi/font": ^7.2.96
     "@mdi/js": ^7.2.96
     "@types/node": ^18
     "@typescript-eslint/eslint-plugin": ^5.50.0
@@ -5575,7 +5583,7 @@ __metadata:
     sass: ^1.62.1
     typescript: "*"
     vite-plugin-vuetify: ^1.0.2
-    vuetify: ^3.2.5
+    vuetify: ^3.3.3
   languageName: unknown
   linkType: soft
 
@@ -7929,22 +7937,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vuetify@npm:^3.2.5":
-  version: 3.2.5
-  resolution: "vuetify@npm:3.2.5"
+"vuetify@npm:^3.3.3":
+  version: 3.3.3
+  resolution: "vuetify@npm:3.3.3"
   peerDependencies:
+    typescript: ">=4.7"
     vite-plugin-vuetify: ^1.0.0-alpha.12
     vue: ^3.2.0
     vue-i18n: ^9.0.0
     webpack-plugin-vuetify: ^2.0.0-alpha.11
   peerDependenciesMeta:
+    typescript:
+      optional: true
     vite-plugin-vuetify:
       optional: true
     vue-i18n:
       optional: true
     webpack-plugin-vuetify:
       optional: true
-  checksum: b974f87165b66eaf13ad86fb717f3f8673092be7d0fb7842ea650cdc02eb0091729593464b825d91cd0b86843a65acc240ddb7649d2049cac3544afb7072d09c
+  checksum: 76c1db6f00270f9917996fd502e8b5660c8772bf62ac80f0ba4270afe9149ca53bd49628b40a50524e1a0edf67198884c5b61b046013a525d911b80d8f782e63
   languageName: node
   linkType: hard
 
