@@ -3,7 +3,7 @@
     <v-app-bar color="primary">
       <v-app-bar-nav-icon
         valiant="text"
-        @click.stop="drawer != drawer"
+        @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <v-app-bar-title>みんクル</v-app-bar-title>
       <v-btn> サインイン </v-btn>
@@ -13,7 +13,7 @@
     </v-app-bar>
 
     <v-main>
-      <v-navigation-drawer>
+      <v-navigation-drawer v-model="drawer">
         <v-list select-strategy="classic">
           <v-list-subheader>メーカー</v-list-subheader>
           <v-list-item value="マツダ">
@@ -237,59 +237,41 @@
         </v-container>
       </v-toolbar>
 
-      <v-container fluid class="ma-4 pa-0">
-        <v-row v-for="j in 4" :key="j">
-          <v-col v-for="i in 4" :key="i">
-            <v-card max-width="320">
-              <v-img
-                src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
-                class="align-end"
-                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                height="200"
-                cover
-              >
-                <v-toolbar density="compact" color="rgba(0, 0, 0, 0)">
-                  <v-toolbar-title class="text-white">CX-5</v-toolbar-title>
-                  <v-spacer></v-spacer>
-                  <v-btn icon>
-                    <v-icon class="text-white">mdi-star</v-icon>
-                  </v-btn>
-                </v-toolbar>
-              </v-img>
-              <v-card-item>
-                <v-card-subtitle>マツダ</v-card-subtitle>
-              </v-card-item>
-              <v-card-text>
-                <div>320万円</div>
-                <div>全長 4747mm, 全幅 1850mm, 全高 1690mm</div>
-                <div>SUV, AWD, エンジン, レギュラーガソリン</div>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
+      <div class="d-flex flex-wrap">
+        <v-card class="mt-4 ml-4" width="320" v-for="i in 10" :key="i">
+          <v-img
+            src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
+            class="align-end"
+            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+            height="200"
+            cover
+          >
+            <v-toolbar density="compact" color="rgba(0, 0, 0, 0)">
+              <v-toolbar-title class="text-white">CX-5</v-toolbar-title>
+              <v-spacer></v-spacer>
+              <v-btn icon>
+                <v-icon class="text-white">mdi-star</v-icon>
+              </v-btn>
+            </v-toolbar>
+          </v-img>
+          <v-card-item>
+            <v-card-subtitle>マツダ</v-card-subtitle>
+          </v-card-item>
+          <v-card-text>
+            <div>320万円</div>
+            <div>全長 4747mm, 全幅 1850mm, 全高 1690mm</div>
+            <div>SUV, AWD, エンジン, レギュラーガソリン</div>
+          </v-card-text>
+        </v-card>
+      </div>
     </v-main>
-    <!-- <v-navigation-drawer v-model="drawer">
-      <v-list nav>
-        <v-list-item title="Home" value="home"></v-list-item>
-        <v-list-item title="About" value="about"></v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-main>
-      <v-container>
-        <p>Hoge 1</p>
-        <p>Hoge 2</p>
-        <p>Hoge 3</p>
-        <p>Hoge 4</p>
-        <p>Hoge 5</p>
-      </v-container>
-    </v-main> -->
   </v-app>
 </template>
 
+<style scoped></style>
+
 <script setup lang="ts">
-const drawer = null;
+const drawer = ref(false);
 // import { MainLayouts } from './layouts/MainLayouts.vue';
 // import { capitalize } from './helpers/capitalize';
 // const msg = 'hello';
