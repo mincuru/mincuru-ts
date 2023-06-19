@@ -1,5 +1,8 @@
 {
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    }
+  "[json][jsonc][vue][typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.indentSize": 2
+  },
+  "vscode-color-picker.languages": ["vue", "json"]
 }
